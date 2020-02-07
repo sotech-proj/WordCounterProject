@@ -15,6 +15,11 @@ It can be run using the following command.
     mvn test
 
 
+Running the command below will fetch dependencies, build, compile the application and run the tests.
+
+    mvn clean install
+
+
 Note
 --------------
 The ITranslator interface is used to define the api of the translator class that will be provided. 
