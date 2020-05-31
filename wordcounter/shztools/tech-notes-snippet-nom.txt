@@ -1,0 +1,19 @@
+tibrvlisten -service 8908 -network ;239.191.89.08 -daemon tcp:7500  "EUCLID.EUCLIDINSTRUMENT.ln_stg"
+
+
+C:\Documents and Settings\adesousa>tibrvlisten -service 8908 -network ;239.191.8
+9.08 -daemon tcp:7500 "EUCLID.EUCLIDINSTRUMENT.ln_stg" 
+
+tibrvlisten: Listening to subject EUCLID.EUCLIDINSTRUMENT.ln_stg
+
+2011-05-06 17:27:44 (2011-05-06 16:27:44.702000000Z): subject=EUCLID.EUCLIDINSTR
+UMENT.ln_stg, message={Date="2011-05-06 05:27:44.70" Instr
+
+LISTENING AND SENDING OVER TIBCO - COMMAND LINE
+
+tibrvsend -service 8908 -network ;239.191.89.08 -daemon tcp:7500 "samuel-subject" "it works 3"
+
+tibrvlisten -service 8908 -network ;239.191.89.08 -daemon tcp:7500 "samuel-subject"
+
+THE FOLLOWING BELOW WILL KILL ALL THE EUCLID VIEWERS IN STAGING
+tibrvsend -service 8908 -network ;239.191.89.08 -daemon tcp:7500 "EUCLID.ln_stg.NOTIFICATION.ShutdownUserViewers" "test"
